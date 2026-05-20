@@ -160,21 +160,54 @@ FROM Visitor
 ORDER BY AmountPaid DESC;
 --@block Question 47 i)
 SELECT ENAME
-FROM EMPLOYEE
+FROM EMPLOYEES
 WHERE ENAME LIKE 'V%'
 ORDER BY SALARY ASC;
 ---@block ii) 
 SELECT *
-FROM EMPLOYEE
+FROM EMPLOYEED
 WHERE DEPT = 'SALES'
   AND SALARY > 20000;
 ---@block iii) 
 SELECT COUNT(DISTINCT DEPT)
-FROM EMPLOYEE;
+FROM EMPLOYEED;
 ---@block iv) 
-UPDATE EMPLOYEE
+UPDATE EMPLOYEED
 SET SALARY = 20000
 WHERE ENAME = 'NITIN';
 ---@block v) 
-INSERT INTO EMPLOYEE
+INSERT INTO EMPLOYEES
 VALUES (6, 'SUMIT', 'HR', 40000, 2000);
+--@block vi)
+SELECT AVG(COMM)
+FROM EMPLOYEES;
+--@block vii)
+SELECT ENAME,
+  DEPT
+FROM EMPLOYEES
+WHERE DEPT in ('HR', 'ACCOUNTS');
+--@block viii)
+SELECT ENAME,
+  SALARY + 100 as NEWSAL
+FROM EMPLOYEES;
+--@block 49 i)
+SELECT PatID,
+  PatName,
+  DocName
+FROM Patient
+  JOIN Doctor on Patient.DocID = Doctor.DocID
+WHERE Specialist in ('Cardio', 'Ortho');
+--@block ii)
+SELECT DocName,
+  PatName
+FROM Patient
+  JOIN Doctor on Patient.DocID = Doctor.DocID
+WHERE DateAdm < '2013-10-15';
+--@block 50 i)
+SELECT round(55.698, 2);
+--@block ii)
+SELECT mid('examination', 4, 4);
+--@block iii)
+SELECT round(4562.778, -2);
+--@block iv)
+SELECT length(trim('  exam  '));

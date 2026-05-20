@@ -366,16 +366,40 @@ VALUES (1, 'Suman', 'F', 'Kanpur', 2500),
   (7, 'Dinesh', 'M', 'Lucknow', NULL),
   (8, 'Shikha', 'F', 'Varanasi', 5000);
 --@block Question 47
-CREATE TABLE EMPLOYEE (
+CREATE TABLE EMPLOYEES (
   EMPNO INT PRIMARY KEY,
   ENAME VARCHAR(50),
   DEPT VARCHAR(20),
   SALARY INT,
   COMM INT
 );
-INSERT INTO EMPLOYEE (EMPNO, ENAME, DEPT, SALARY, COMM)
+INSERT INTO EMPLOYEES (EMPNO, ENAME, DEPT, SALARY, COMM)
 VALUES (1, 'ANKIT', 'HR', 20000, 1200),
   (2, 'SUJEET', 'ACCOUNTS', 24000, NULL),
   (3, 'VIJAY', 'HR', 28000, 2000),
   (4, 'NITIN', 'SALES', 18000, 3000),
   (5, 'VIKRAM', 'SALES', 22000, 1700);
+--@block Question 49
+CREATE TABLE Doctor (
+  DocID VARCHAR(5) PRIMARY KEY,
+  DocName VARCHAR(50) NOT NULL,
+  Specialist VARCHAR(30) NOT NULL
+);
+INSERT INTO Doctor (DocID, DocName, Specialist)
+VALUES ('D001', 'Vimal Jha', 'Cardio'),
+  ('D002', 'Sunil Bawra', 'Ortho'),
+  ('D003', 'Mukul Barman', 'Surgeon'),
+  ('D004', 'Nitesh Solanki', 'Skin');
+CREATE TABLE Patient (
+  PatID VARCHAR(5) PRIMARY KEY,
+  PatName VARCHAR(50) NOT NULL,
+  DateAdm DATE NOT NULL,
+  DocID VARCHAR(5),
+  FOREIGN KEY (DocID) REFERENCES Doctor(DocID)
+);
+INSERT INTO Patient (PatID, PatName, DateAdm, DocID)
+VALUES ('P001', 'Kapil', '2013-10-10', 'D002'),
+  ('P002', 'Susheel', '2013-09-01', 'D001'),
+  ('P003', 'Wasim', '2013-10-15', 'D002'),
+  ('P004', 'Sanjay', '2013-10-12', 'D003'),
+  ('P005', 'Jai', '2013-10-17', 'D003');
