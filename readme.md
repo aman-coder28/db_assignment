@@ -1,5 +1,3 @@
-Based on the structure of your repository, you have two primary SQL files: setup-tables.sql and select-tables.sql.
-Here is an updated and tailored version of your README.md that explicitly breaks down and explains the purpose and contents of these specific files.
 ```markdown
 # 📊 Relational Database & SQL Queries Assignment
 
