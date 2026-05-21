@@ -1,4 +1,3 @@
-```markdown
 # 📊 Relational Database & SQL Queries Assignment
 
 Welcome to the **db_assignment** repository! This project contains SQL scripts designed to set up a relational database, establish a table schema, insert mock data, and run various queries to retrieve and analyze the data.
@@ -36,7 +35,6 @@ To test these scripts locally, you will need a SQL environment (such as MySQL, P
    git clone [https://github.com/aman-coder28/db_assignment.git](https://github.com/aman-coder28/db_assignment.git)
    cd db_assignment
 
-```
  2. **Initialize the Database:**
    Run the setup script first to create your tables and insert the data.
    ```sql
@@ -54,4 +52,3 @@ To test these scripts locally, you will need a SQL environment (such as MySQL, P
 ## ✒️ Author
  * **Aman** - @aman-coder28
 Feel free to fork this repository, explore the queries, or submit a pull request if you'd like to suggest optimizations or add more advanced query challenges!
-```
