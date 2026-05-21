@@ -32,13 +32,13 @@ To test these scripts locally, you will need a SQL environment (such as MySQL, P
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/aman-coder28/db_assignment.git](https://github.com/aman-coder28/db_assignment.git)
+   git clone https://github.com/aman-coder28/db_assignment.git
    cd db_assignment
+   ```
 
  2. **Initialize the Database:**
    Run the setup script first to create your tables and insert the data.
    ```sql
-   -- From your SQL command line or GUI runner
    SOURCE setup-tables.sql;
    
    ```
@@ -47,7 +47,6 @@ To test these scripts locally, you will need a SQL environment (such as MySQL, P
    Once the database is populated, execute the select script to see the results of the data retrieval logic.
    ```sql
    SOURCE select-tables.sql;
-   
    ```
 ## ✒️ Author
  * **Aman** - @aman-coder28
